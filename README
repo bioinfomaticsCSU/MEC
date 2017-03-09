@@ -22,7 +22,8 @@ Central South University
 ChangSha
 CHINA, 410083
 
-MEC README file
+
+MEC
 =================
 1) Introduction
 
@@ -31,8 +32,8 @@ MEC README file
 
 2) Installing
 
-	If the users don't install python and pysam module in your PATH, you must first install it. Or you can use the executable python in the directory /third_party/python2.7/bin/python, which is packaged with the source code, and put it in your PATH.
-
+	If the users don't install python and pysam module in your PATH, you must first install it. 
+	Or you can use the executable python in the directory /third_party/python2.7/bin/python, which is packaged with the source code, and put it in your PATH.
 
 3) Running
 
@@ -61,9 +62,9 @@ MEC README file
 	-n <minimum number>
 		Optional parameter. Minimum number of read pairs which map discordantly on the candidate misassembly. Default value: 2.
 	-sspace
-		Optional parameter. Whether use sspace to scaffold. Default value: 0.	
-
+		Optional parameter. Whether use sspace to scaffold. Default value: 0.
+	
 4) Output:
 
 	The final output file including the corrected fasta file and the correct interval for each contig ("intervals.txt").
-	
+
