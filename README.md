@@ -36,7 +36,7 @@ MEC
 	Or you can use the executable python in the directory /third_party/python2.7/bin/python, which is packaged with the source code, and put it in your PATH.
 
 3) Running
-
+```
 	Please go to the directory "src".
 	Run command line:  
 	python mec.py -m1 pair1.fasta -m2 pair2.fasta -i assembly.fasta -o correct_assembly.fasta [options] 
@@ -63,7 +63,7 @@ MEC
 		Optional parameter. Minimum number of read pairs which map discordantly on the candidate misassembly. Default value: 2.
 	-sspace
 		Optional parameter. Whether use sspace to scaffold. Default value: 0.
-	
+```	
 4) Output:
 
 	The final output file including the corrected fasta file and the correct interval for each contig ("intervals.txt").
