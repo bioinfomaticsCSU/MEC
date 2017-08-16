@@ -32,14 +32,14 @@ MEC
 
 2) Installing
 
-	First, Please build and install Python and pysam module. 
+	First, please build and install Python and pysam module. 
 	The version of python we used is Python 2.7.11, which can be downloaded from https://www.python.org/downloads/release/python-2711/.
-	The version of Cython  we used is Cython-0.25.2, which can be downloaded from https://pypi.python.org/pypi/Cython/0.25.2
+	The version of Cython  we used is Cython-0.25.2, which can be downloaded from https://pypi.python.org/pypi/Cython/0.25.2.
 	The version of pysam module we used is pysam-0.8.4, which can be downloaded from https://pypi.python.org/pypi/pysam/0.8.4. 
 	
 	In addition, please build and install bowtie2 and samtools.
-	The version of Bowtie2 we used is bowtie2-2.2.8, which can be downloaded from https://sourceforge.net/projects/bowtie-bio/files/bowtie2/2.3.2
-	The version of Samtools we used is samtools-1.2, which can be downloaded from https://sourceforge.net/projects/samtools/files/samtools/
+	The version of Bowtie2 we used is bowtie2-2.2.8, which can be downloaded from https://sourceforge.net/projects/bowtie-bio/files/bowtie2/2.3.2.
+	The version of Samtools we used is samtools-1.2, which can be downloaded from https://sourceforge.net/projects/samtools/files/samtools/.
 
 3) Running
 ```
