@@ -18,4 +18,4 @@ samtools sort contigs_short.bam contigs_short.sort
 samtools index contigs_short.sort.bam
 
 #Using MEC to detect and correct the misassemblies
-python mec.py -bam contigs_short.sort.bam -i contigs.fa -o contigs-corr.fa
+python mec.py -bam contigs_short.sort.bam -a 0.4 -b 0.5 -m 600 -s 100 -i contigs.fa -o contigs-corr.fa
