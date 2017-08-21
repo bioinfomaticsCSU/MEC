@@ -58,7 +58,7 @@ MEC
 	-b <beta>
 		Optional parameter. One cutoff for removing false misassemblies. Default value: 0.5.
 	-g <gamma>
-		Optional parameter. One parameter for determining high or low GC content. Default value: 0.15.
+		Optional parameter. One parameter for determining high or low GC content. Default value: 0.2.
 ```	
 4) Output:
 
