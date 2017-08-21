@@ -45,14 +45,8 @@ MEC
 ```
 	Please go to the directory "src".
 	Run command line:  
-	python mec.py -bam pairs.sort.bam -i assembly.fasta -o correct_assembly.fasta [options] 
+	python mec.py pairs.sort.bam assembly.fasta correct_assembly.fasta [options] 
 	[options]
-	-i <input_assembly.fasta>
-		Mandatory parameter. The input assembly fasta file.
-	-o <output_correct_assembly.fasta>
-		Mandatory parameter. The output corrected fasta file.
-	-bam <the index bam file>
-		Mandatory parameter. The index bam file for alignment. 
 	-q <minimum mapping quality>
 		Optional parameter. The minimum value of mapping quality. Default value: 40.
 	-m <mu>
