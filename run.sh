@@ -2,7 +2,7 @@
 
 #In the following, there is an example of command lines with MEC to correct misassemblies.
 
-#Propreccessing the paired-end reads if it is necessary
+#Propreccessing the paired-end reads
 python cut_reads.py reads_1.trimmed.fastq reads_2.trimmed.fastq reads_1.trimmed_cut.fastq reads_2.trimmed_cut.fastq
 
 #Inverting the head of the fasta file in contig before mapping
