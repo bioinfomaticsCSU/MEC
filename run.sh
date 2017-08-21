@@ -12,10 +12,15 @@ awk 'BEGIN{id=1}{if($0~/>/){printf(">%d\n",id);id++}else{print $0}}' input_conti
 bowtie2-build contigs.fa contigs
 bowtie2 -x contigs -1 reads_1.trimmed_cut.fastq -2 reads_2.trimmed_cut.fastq -S contigs_short.sam
 
-#iIverting the sam file to the bam file using samtools
+#Inverting the sam file to the bam file using samtools
 samtools view -bS contigs_short.sam > contigs_short.bam
 samtools sort contigs_short.bam contigs_short.sort
 samtools index contigs_short.sort.bam
+
+#Deleting the unneccessary files
+rm -rf *.bt2
+rm contigs_short.sam
+rm contigs_short.bam
 
 #Using MEC to detect and correct the misassemblies
 python mec.py -bam contigs_short.sort.bam -a 0.4 -b 0.5 -m 600 -s 100 -i contigs.fa -o contigs-corr.fa
