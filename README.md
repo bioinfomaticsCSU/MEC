@@ -86,6 +86,7 @@ MEC
 		Optional parameter. One parameter for determining high or low GC content. Default value: 0.2.
 ```	
 4) Example:
+
 	There is an example of command lines with MEC to correct misassemblies shown in "run.sh".
 
 5) Output:
