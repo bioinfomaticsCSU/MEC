@@ -86,7 +86,7 @@ def main():
     parser.add_argument('-q', metavar ='minmapq', type=int,default=40, help='Minimum mapping quality value. Default value: 40')
     parser.add_argument('-a', metavar ='alpha', type=float, default=0.4, help='The percentage of the average of the fragment coverage. Default value: 0.4')
     parser.add_argument('-b', metavar ='beta', type=float, default=0.5, help='One cutoff for removing false misassemblies. Default value: 0.5')
-    parser.add_argument('-g', metavar ='gamma', type=float, default=0.2, help='One parameter for determining high or low GC content. Default value: 0.15.')
+    parser.add_argument('-g', metavar ='gamma', type=float, default=0.2, help='One parameter for determining high or low GC content. Default value: 0.2.')
     args = parser.parse_args()
 
     print "start parse contig file"
