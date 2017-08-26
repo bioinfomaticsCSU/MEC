@@ -85,7 +85,9 @@ MEC
 	-g <gamma>
 		Optional parameter. One parameter for determining high or low GC content. Default value: 0.2.
 ```	
+4) Example:
+	There is an example of command lines with MEC to correct misassemblies shown in "run.sh".
 
-4) Output:
+5) Output:
 
 	The final output file including the corrected fasta file and the correct interval for each contig ("intervals.txt").
