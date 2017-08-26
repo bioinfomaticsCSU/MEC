@@ -43,9 +43,18 @@ MEC
 	
 3) Running
 ```
+    3.1) Mapping the paired-end reads to the contigs
+    	#Inverting the head of the contig file in contig before mapping with AWk
+	    awk 'BEGIN{id=1}{if($0~/>/){printf(">%d\n",id);id++}else{print $0}}' input_contigs.fa > contigs.fa
+
+	#Mapping the paired-end reads to the contigs using Bowtie2
+	    bowtie2-build contigs.fa contigs
+	    bowtie2 -x contigs -1 reads_1.trimmed_cut.fastq -2 reads_2.trimmed_cut.fastq -S contigs_short.sam
+	
+    3.2) Correcting the misassemblies with MEC
 	Please go to the directory "src".
 	Run command line:  
-	python mec.py -bam pairs.sort.bam -i assembly.fasta -o correct_assembly.fasta [options] 
+	python mec.py -bam contigs.sort.bam -i assembly.fasta -o correct_assembly.fasta [options] 
 	[options]
 	-i <input_assembly.fasta>
 		Mandatory parameter. The input assembly fasta file.
@@ -67,32 +76,6 @@ MEC
 		Optional parameter. One parameter for determining high or low GC content. Default value: 0.2.
 ```	
 
-4) Running
-```
-	Please go to the directory "src".
-	Run command line:  
-	python mec.py -bam pairs.sort.bam -i assembly.fasta -o correct_assembly.fasta [options] 
-	[options]
-	-i <input_assembly.fasta>
-		Mandatory parameter. The input assembly fasta file.
-	-o <output_correct_assembly.fasta>
-		Mandatory parameter. The output corrected fasta file.
-	-bam <the index bam file>
-		Mandatory parameter. The index bam file for alignment. 
-	-q <minimum mapping quality>
-		Optional parameter. The minimum value of mapping quality. Default value: 40.
-	-m <mu>
-		Optional parameter. The mean of the paired-end reads' insert size. Default value: 0.
-	-s <sigma>
-		Optional parameter. The variance of the paired-end reads' insert size. Default value: 0.
-	-a <alpha>
-		Optional parameter. The percentage of the average of the fragment coverage. Default value: 0.4.
-	-b <beta>
-		Optional parameter. One cutoff for removing false misassemblies. Default value: 0.5.
-	-g <gamma>
-		Optional parameter. One parameter for determining high or low GC content. Default value: 0.2.
-```	
-
-5) Output:
+4) Output:
 
 	The final output file including the corrected fasta file and the correct interval for each contig ("intervals.txt").
