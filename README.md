@@ -48,13 +48,12 @@ MEC
 	awk 'BEGIN{id=1}{if($0~/>/){printf(">%d\n",id);id++}else{print $0}}' input_contigs.fa > contigs.fa
 
 	#Mapping the paired-end reads to the contigs using Bowtie2 
-	    #if the paired-end reads are raw datas, run command line:
-	    bowtie2-build contigs.fa contigs
-	    bowtie2 -x contigs -1 reads_1.fastq -2 reads_2.fastq -S contigs_short.sam
-	    
-	    #if the paired-end reads are trimmed and cut, run command line:
-	    bowtie2-build contigs.fa contigs
-	    bowtie2 -x contigs -1 reads_1.trimmed_cut.fastq -2 reads_2.trimmed_cut.fastq -S contigs_short.sam
+	#if the paired-end reads are raw datas, run command line:
+	bowtie2-build contigs.fa contigs
+	bowtie2 -x contigs -1 reads_1.fastq -2 reads_2.fastq -S contigs_short.sam
+	#if the paired-end reads are trimmed and cut, run command line:
+	bowtie2-build contigs.fa contigs
+	bowtie2 -x contigs -1 reads_1.trimmed_cut.fastq -2 reads_2.trimmed_cut.fastq -S contigs_short.sam
 	    
 	#Inverting the sam file to the bam file using samtools
 	samtools view -bS contigs_short.sam > contigs_short.bam
